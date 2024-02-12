@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/isfonzar/mindfield/issues"
   },
-  "homepage": "https://github.com/isfonzar/mindfield#readme"
+  "homepage": "https://github.com/isfonzar/mindfield#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
 }
