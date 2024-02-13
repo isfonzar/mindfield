@@ -7,5 +7,5 @@ mindfield is a website application.
 ### tailwind: generate css
 
 ```shell
-$ npx tailwindcss -i ./resources/main.css -o ./public/main.css --watch
+$ npx tailwindcss -i ./resources/css/main.css -o ./public/main.css --watch
 ```
