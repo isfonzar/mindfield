@@ -2,8 +2,12 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
 )
+
+type HomePage struct {
+}
 
 func main() {
 	http.HandleFunc("/", handler)
@@ -13,5 +17,20 @@ func main() {
 
 func handler(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "text/html")
-	fmt.Fprintf(w, "<h1>Hello, this is server-side rendered!</h1>")
+
+	// Parse the HTML template
+	tmpl, err := template.ParseFiles("html/pages/home.html")
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+		return
+	}
+
+	// Create an instance of `HomePage`
+	data := HomePage{}
+
+	// Execute the template, inserting the name into the placeholder
+	err = tmpl.Execute(w, data)
+	if err != nil {
+		http.Error(w, err.Error(), http.StatusInternalServerError)
+	}
 }
