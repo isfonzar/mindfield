@@ -10,6 +10,8 @@ type HomePage struct {
 }
 
 func main() {
+	// Serve files under the ./static/css directory under the /css prefix
+	http.Handle("/assets/css/", http.StripPrefix("/assets/css/", http.FileServer(http.Dir("./public/assets/css"))))
 	http.HandleFunc("/", handler)
 	fmt.Println("Server is running on http://localhost:8080")
 	http.ListenAndServe(":8080", nil)
