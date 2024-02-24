@@ -19,5 +19,8 @@
   "homepage": "https://github.com/isfonzar/mindfield#readme",
   "devDependencies": {
     "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.7"
   }
 }

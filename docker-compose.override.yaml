@@ -2,3 +2,4 @@ services:
   app:
     volumes:
       - ./resources/html:/server/html
+      - ./public:/server/public
