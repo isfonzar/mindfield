@@ -1,6 +1,6 @@
-# mindfield
+# peekaboo
 
-mindfield is a website application.
+**p**ee**k**aa**b**oo is a **p**ersonal **k**nowledge**b**ase web application, currently under development.
 
 ## useful commands
 
